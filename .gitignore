@@ -1,0 +1,12 @@
+.DS_Store
+node_modules
+public/bundle.*
+
+
+#Added by cargo
+#
+#already existing elements are commented out
+
+/target
+**/*.rs.bk
+Cargo.lock
