@@ -1,13 +1,18 @@
 <script>
   import { onMount } from "svelte";
   import TaskMenu from "./applications/TaskMenu.svelte";
+  import Youtube from "./applications/Youtube.svelte";
 
   let src = "images/logo_start.png";
 
   let time = new Date();
   let isHide = true;
+  let youtube = false;
 
   const watchClock = time => (time < 10 ? `0${time}` : time);
+  const callMeDad = name => {
+    youtube = true;
+  };
 
   $: hours = watchClock(time.getHours());
   $: minutes = watchClock(time.getMinutes());
@@ -108,8 +113,13 @@
 </style>
 
 {#if !isHide}
-  <TaskMenu />
+  <TaskMenu {callMeDad} />
 {/if}
+
+{#if youtube}
+  <Youtube />
+{/if}
+
 <header id="navigationbar">
   <nav>
     <div class="menu">

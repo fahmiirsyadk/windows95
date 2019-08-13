@@ -1,5 +1,10 @@
 <script>
+  export let callMeDad;
   import routes from "./routes.js";
+
+  const toggleEffect = name => {
+    callMeDad(name);
+  };
 </script>
 
 <style>
@@ -50,7 +55,9 @@
   <ul id="menu-panel-items">
     {#each routes as application}
       {#if !application.system}
-        <li>{application.name}</li>
+        <li on:click={() => toggleEffect(application.name)}>
+          {application.name}
+        </li>
       {/if}
     {/each}
   </ul>

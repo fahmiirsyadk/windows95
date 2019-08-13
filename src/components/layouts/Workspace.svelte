@@ -55,25 +55,9 @@
     position: relative;
   }
 
-  .workspace__item {
-    touch-action: none;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background: red;
-    z-index: 0;
-    color: #fff;
-    text-align: center;
-    display: inline-block;
-    vertical-align: top;
-    height: 60px;
-    width: 72px;
-    line-height: 12px;
-    margin-bottom: 2px;
-    padding-top: 5px;
-    padding-left: 1px;
+  .workspace-item {
+    user-select: none;
   }
-
   .workspace-item__header {
     color: #fff;
     margin-bottom: 2px;
@@ -166,6 +150,13 @@
       <button class="button-window">_</button>
       <button class="button-window">X</button>
     </div>
+  </div>
+  <div class="workspace-item__panel">
+    <ul>
+      <li>File</li>
+      <li>Help</li>
+      <li>About</li>
+    </ul>
   </div>
   <div class="workspace-item__content">
     <slot />
