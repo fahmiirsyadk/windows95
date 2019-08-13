@@ -2,16 +2,20 @@
   import { onMount } from "svelte";
   import TaskMenu from "./applications/TaskMenu.svelte";
   import Youtube from "./applications/Youtube.svelte";
+  import Calculator from "./applications/Calculator.svelte";
 
   let src = "images/logo_start.png";
 
   let time = new Date();
-  let isHide = true;
-  let youtube = false;
+  let access = {
+    TaskMenu: false,
+    Youtube: false,
+    Calculator: false
+  };
 
   const watchClock = time => (time < 10 ? `0${time}` : time);
-  const callMeDad = name => {
-    youtube = true;
+  const toggleAccess = name => {
+    access[name] = true;
   };
 
   $: hours = watchClock(time.getHours());
@@ -112,11 +116,13 @@
   }
 </style>
 
-{#if !isHide}
-  <TaskMenu {callMeDad} />
+{#if access.TaskMenu}
+  <TaskMenu {toggleAccess} />
 {/if}
 
-<Youtube {youtube} />
+<Youtube val={access.Youtube} />
+<Calculator val={access.Calculator} />
+
 <header id="navigationbar">
   <nav>
     <div class="menu">
@@ -124,7 +130,7 @@
         <button
           id="start-panel"
           class="btn--start menu__button"
-          on:click={() => (isHide = !isHide)}>
+          on:click={() => (access.TaskMenu = !access.TaskMenu)}>
           <img {src} alt="logo_start" />
           Start
         </button>

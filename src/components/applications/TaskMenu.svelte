@@ -1,9 +1,9 @@
 <script>
-  export let callMeDad;
+  export let toggleAccess;
   import routes from "./routes.js";
 
   const toggleEffect = name => {
-    callMeDad(name);
+    toggleAccess(name);
   };
 </script>
 

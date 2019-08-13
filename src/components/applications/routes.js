@@ -8,6 +8,11 @@ const routes_application = [
     name: "Youtube",
     system: false,
     showed: true
+  },
+  {
+    name: "Calculator",
+    system: false,
+    showed: true
   }
 ];
 

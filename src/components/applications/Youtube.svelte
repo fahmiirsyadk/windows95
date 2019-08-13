@@ -1,10 +1,10 @@
 <script>
-  export let youtube;
+  export let val;
   import Guard from "./../layouts/Guard.svelte";
   import Workspace from "./../layouts/Workspace.svelte";
 </script>
 
-<Guard val={youtube}>
+<Guard {val}>
   <Workspace id="surprices-app">
     <div class="menu-utama">
       <iframe
