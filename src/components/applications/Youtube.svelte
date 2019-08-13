@@ -1,8 +1,10 @@
 <script>
+  export let youtube;
+  import Guard from "./../layouts/Guard.svelte";
   import Workspace from "./../layouts/Workspace.svelte";
 </script>
 
-<div id="surprices-id" style="top: 100px; position: absolute;">
+<Guard val={youtube}>
   <Workspace id="surprices-app">
     <div class="menu-utama">
       <iframe
@@ -18,4 +20,4 @@
       <h1>HEY HEY IM ASYNC 2</h1>
     </div>
   </Workspace>
-</div>
+</Guard>

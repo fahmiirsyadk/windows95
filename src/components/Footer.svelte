@@ -116,10 +116,7 @@
   <TaskMenu {callMeDad} />
 {/if}
 
-{#if youtube}
-  <Youtube />
-{/if}
-
+<Youtube {youtube} />
 <header id="navigationbar">
   <nav>
     <div class="menu">

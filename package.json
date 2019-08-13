@@ -9,12 +9,9 @@
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-svelte": "^5.0.3",
     "rollup-plugin-terser": "^4.0.4",
-    "rust-native-wasm-loader": "^0.8.1",
-    "svelte": "^3.0.0",
-    "wasm-loader": "^1.3.0"
+    "svelte": "^3.0.0"
   },
   "dependencies": {
-    "rollup-plugin-rust": "^1.2.0",
     "sirv-cli": "^0.4.4"
   },
   "scripts": {
